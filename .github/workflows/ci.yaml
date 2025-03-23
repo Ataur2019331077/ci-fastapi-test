@@ -25,7 +25,9 @@ jobs:
       - name: Run Tests
         id: run_tests
         run: |
-          pytest || echo "TEST_FAILED=true" >> $GITHUB_ENV
+          export PYTHONPATH=$PYTHONPATH:$(pwd) 
+          pytest tests/main_test.py || echo "TEST_FAILED=true" >> $GITHUB_ENV
+
 
       - name: Comment on PR if Tests Fail
         if: env.TEST_FAILED == 'true'
