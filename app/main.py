@@ -8,7 +8,7 @@ def read_root():
 
 @app.get("/health")
 def health_check():
-    return {"status": "running"}
+    return {"status": "Running"}
 
 @app.get("/check")
 def check():

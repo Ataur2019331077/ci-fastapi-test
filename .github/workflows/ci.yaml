@@ -9,8 +9,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     permissions:
-      issues: write      # Make sure to grant comment permissions
-      pull_requests: write  # Permissions for pull request management
+      issues: write      # Grant permission to post comments
+      pull-requests: write  # Allow pull request management (commenting and merging)
 
     steps:
       - name: Checkout Repository
